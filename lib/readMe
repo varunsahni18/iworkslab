@@ -1,0 +1,9 @@
+public getter function
+mapping from manufacture id to list of product ids
+manufacture - product ids to product details
+product details would include the following
+    1. A map having details regarding the list of removed product and the digital signature
+
+A maping liking the product id to the customers address
+A transfer function to transfer the ownership of the product and some fee to the original owner
+ 
