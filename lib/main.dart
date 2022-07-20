@@ -59,6 +59,7 @@ class MyApp extends StatelessWidget {
           )),
           home: WelcomeScreen(),
           routes: {
+            ProductsOverviewScreen.routeName: (ctx) => ProductsOverviewScreen(),
             ProductDetailScreen.routeName: (ctx) => ProductDetailScreen(),
             CartScreen.routeName: (ctx) => CartScreen(),
             OrdersScreen.routeName: (ctx) => OrdersScreen(),

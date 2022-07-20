@@ -25,6 +25,8 @@ class _EditProductScreenState extends State<EditProductScreen> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Edit Product'),
+        backgroundColor: Colors.transparent,
+        elevation: 0,
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -32,14 +34,23 @@ class _EditProductScreenState extends State<EditProductScreen> {
           child: ListView(
             children: <Widget>[
               TextFormField(
-                decoration: InputDecoration(labelText: 'Title'),
+                decoration: InputDecoration(
+                    labelText: 'Title',
+                    fillColor: Colors.white,
+                    labelStyle: TextStyle(color: Colors.black)),
                 textInputAction: TextInputAction.next,
                 onFieldSubmitted: (_) {
                   FocusScope.of(context).requestFocus(_priceFocusNode);
                 },
               ),
+              const SizedBox(
+                height: 10,
+              ),
               TextFormField(
-                decoration: InputDecoration(labelText: 'Price'),
+                decoration: InputDecoration(
+                    labelText: 'Price',
+                    fillColor: Colors.white,
+                    labelStyle: TextStyle(color: Colors.black)),
                 textInputAction: TextInputAction.next,
                 keyboardType: TextInputType.number,
                 focusNode: _priceFocusNode,
@@ -47,11 +58,20 @@ class _EditProductScreenState extends State<EditProductScreen> {
                   FocusScope.of(context).requestFocus(_descriptionFocusNode);
                 },
               ),
+              const SizedBox(
+                height: 10,
+              ),
               TextFormField(
-                decoration: InputDecoration(labelText: 'Description'),
+                decoration: InputDecoration(
+                    labelText: 'Description',
+                    fillColor: Colors.white,
+                    labelStyle: TextStyle(color: Colors.black)),
                 maxLines: 3,
                 keyboardType: TextInputType.multiline,
                 focusNode: _descriptionFocusNode,
+              ),
+              const SizedBox(
+                height: 30,
               ),
               Row(
                 crossAxisAlignment: CrossAxisAlignment.end,
@@ -66,11 +86,16 @@ class _EditProductScreenState extends State<EditProductScreen> {
                     decoration: BoxDecoration(
                       border: Border.all(
                         width: 1,
-                        color: Colors.grey,
+                        color: Colors.white,
                       ),
                     ),
                     child: _imageUrlController.text.isEmpty
-                        ? Text('Enter a URL')
+                        ? Center(
+                            child: Text(
+                              'Enter a URL',
+                              style: TextStyle(color: Colors.white),
+                            ),
+                          )
                         : FittedBox(
                             child: Image.network(
                               _imageUrlController.text,
@@ -80,7 +105,10 @@ class _EditProductScreenState extends State<EditProductScreen> {
                   ),
                   Expanded(
                       child: TextFormField(
-                    decoration: InputDecoration(labelText: 'Image URL'),
+                    decoration: InputDecoration(
+                        labelText: 'Image URL',
+                        fillColor: Colors.white,
+                        labelStyle: TextStyle(color: Colors.black)),
                     keyboardType: TextInputType.url,
                     textInputAction: TextInputAction.done,
                     controller: _imageUrlController,

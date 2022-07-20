@@ -24,6 +24,8 @@ class ProductDetailScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(loadedProduct.title),
+        backgroundColor: Colors.transparent,
+        elevation: 0,
       ),
       body: SingleChildScrollView(
         child: Column(
@@ -40,7 +42,7 @@ class ProductDetailScreen extends StatelessWidget {
             Text(
               'Rs ${loadedProduct.price}',
               style: TextStyle(
-                color: Colors.grey,
+                color: Colors.white,
                 fontSize: 20,
               ),
             ),
@@ -54,6 +56,7 @@ class ProductDetailScreen extends StatelessWidget {
                 loadedProduct.description,
                 textAlign: TextAlign.center,
                 softWrap: true,
+                style: TextStyle(color: Colors.white),
               ),
             )
           ],

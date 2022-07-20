@@ -17,6 +17,8 @@ class OrdersScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('Your Orders'),
+        backgroundColor: Colors.transparent,
+        elevation: 0,
       ),
       drawer: AppDrawer(),
       body: ListView.builder(

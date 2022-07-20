@@ -14,7 +14,8 @@ class LoginScreenTopImage extends StatelessWidget {
       children: [
         Text(
           "LOGIN",
-          style: TextStyle(fontWeight: FontWeight.bold),
+          style: TextStyle(
+              fontWeight: FontWeight.bold, color: Colors.white, fontSize: 24),
         ),
         SizedBox(height: defaultPadding * 2),
         Row(

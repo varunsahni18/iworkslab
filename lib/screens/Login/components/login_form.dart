@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:iworkslab/screens/products_overview_screen.dart';
 
 import '../../../components/already_have_an_account_acheck.dart';
 import '../../../constants.dart';
@@ -46,7 +47,10 @@ class LoginForm extends StatelessWidget {
           Hero(
             tag: "login_btn",
             child: ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.of(context)
+                    .pushNamed(ProductsOverviewScreen.routeName);
+              },
               child: Text(
                 "Login".toUpperCase(),
               ),

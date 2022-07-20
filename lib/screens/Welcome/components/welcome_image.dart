@@ -13,8 +13,9 @@ class WelcomeImage extends StatelessWidget {
     return Column(
       children: [
         Text(
-          "WELCOME TO EDU",
-          style: TextStyle(fontWeight: FontWeight.bold),
+          "Protein Factory",
+          style: TextStyle(
+              fontWeight: FontWeight.bold, color: Colors.white, fontSize: 24),
         ),
         SizedBox(height: defaultPadding * 2),
         Row(

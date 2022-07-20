@@ -15,6 +15,8 @@ class UserProductsScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Your Products'),
+        backgroundColor: Colors.transparent,
+        elevation: 0,
         actions: <Widget>[
           IconButton(
             icon: const Icon(Icons.add),
@@ -30,14 +32,14 @@ class UserProductsScreen extends StatelessWidget {
         child: ListView.builder(
           itemCount: productsData.items.length,
           itemBuilder: (_, i) => Column(
-                children: [
-                  UserProductItem(
-                    productsData.items[i].title,
-                    productsData.items[i].imageUrl,
-                  ),
-                  Divider(),
-                ],
+            children: [
+              UserProductItem(
+                productsData.items[i].title,
+                productsData.items[i].imageUrl,
               ),
+              Divider(),
+            ],
+          ),
         ),
       ),
     );

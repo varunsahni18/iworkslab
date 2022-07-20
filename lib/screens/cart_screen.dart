@@ -17,6 +17,8 @@ class CartScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('Your Cart'),
+        backgroundColor: Colors.transparent,
+        elevation: 0,
       ),
       body: Column(
         children: <Widget>[

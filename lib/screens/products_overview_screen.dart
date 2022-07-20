@@ -16,6 +16,7 @@ enum FilterOptions {
 
 // ignore: use_key_in_widget_constructors
 class ProductsOverviewScreen extends StatefulWidget {
+  static const routeName = '/product-overview-screen';
   @override
   // ignore: library_private_types_in_public_api
   _ProductsOverviewScreenState createState() => _ProductsOverviewScreenState();
@@ -28,7 +29,9 @@ class _ProductsOverviewScreenState extends State<ProductsOverviewScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('iWorksLab'),
+        title: Text('Protein Factory'),
+        backgroundColor: Colors.transparent,
+        elevation: 0,
         actions: <Widget>[
           PopupMenuButton(
             onSelected: (FilterOptions selectedValue) {
