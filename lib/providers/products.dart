@@ -1,159 +1,146 @@
+// ignore_for_file: prefer_final_fields
+
 import 'package:flutter/material.dart';
-import 'package:iworkslab/models/product.dart';
+import 'package:iworkslab/providers/product.dart';
 
 class Products with ChangeNotifier {
   List<Product> _items = [
     Product(
       id: 'p1',
-      title: 'Red Shirt',
-      description: 'A red shirt - it is pretty red!',
+      title: 'Sausage',
+      description:
+          'A sausage is a type of meat product usually made from ground meat—often pork, beef, or poultry—along with salt, spices and other flavourings.',
       price: 29.99,
       imageUrl:
-          'https://cdn.pixabay.com/photo/2016/10/02/22/17/red-t-shirt-1710578_1280.jpg',
+          'https://media.istockphoto.com/photos/sausages-picture-id1310971056?b=1&k=20&m=1310971056&s=170667a&w=0&h=JzQPBiik4ke02MDkhl94noQafiqwTXlgR_FEkY8hF88=',
     ),
     Product(
       id: 'p2',
-      title: 'Trousers',
-      description: 'A nice pair of trousers.',
+      title: 'Salami',
+      description:
+          'Salami is a cured sausage consisting of fermented and air-dried meat, typically pork',
       price: 59.99,
       imageUrl:
-          'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Trousers%2C_dress_%28AM_1960.022-8%29.jpg/512px-Trousers%2C_dress_%28AM_1960.022-8%29.jpg',
+          'https://4.imimg.com/data4/IG/FS/MY-9650223/pork-salami-500x500.jpg',
     ),
     Product(
-      id: 'p3',
-      title: 'Yellow Scarf',
-      description: 'Warm and cozy - exactly what you need for the winter.',
-      price: 19.99,
-      imageUrl:
-          'https://live.staticflickr.com/4043/4438260868_cc79b3369d_z.jpg',
-    ),
+        id: 'p3',
+        title: 'Chicken Breast',
+        description:
+            'chicken breast is a lean cut of meat taken from the pectoral muscle on the underside of the chicken. ',
+        price: 19.99,
+        imageUrl:
+            'https://www.licious.in/blog/wp-content/uploads/2021/01/chicken-breast-price-2.jpg'),
     Product(
-      id: 'p1',
-      title: 'Red Shirt',
-      description: 'A red shirt - it is pretty red!',
+      id: 'p4',
+      title: 'Sausage',
+      description:
+          'A sausage is a type of meat product usually made from ground meat—often pork, beef, or poultry—along with salt, spices and other flavourings.',
       price: 29.99,
       imageUrl:
-          'https://cdn.pixabay.com/photo/2016/10/02/22/17/red-t-shirt-1710578_1280.jpg',
+          'https://media.istockphoto.com/photos/sausages-picture-id1310971056?b=1&k=20&m=1310971056&s=170667a&w=0&h=JzQPBiik4ke02MDkhl94noQafiqwTXlgR_FEkY8hF88=',
     ),
     Product(
-      id: 'p2',
-      title: 'Trousers',
-      description: 'A nice pair of trousers.',
+      id: 'p5',
+      title: 'Salami',
+      description:
+          'Salami is a cured sausage consisting of fermented and air-dried meat, typically pork',
       price: 59.99,
       imageUrl:
-          'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Trousers%2C_dress_%28AM_1960.022-8%29.jpg/512px-Trousers%2C_dress_%28AM_1960.022-8%29.jpg',
+          'https://4.imimg.com/data4/IG/FS/MY-9650223/pork-salami-500x500.jpg',
     ),
     Product(
-      id: 'p3',
-      title: 'Yellow Scarf',
-      description: 'Warm and cozy - exactly what you need for the winter.',
-      price: 19.99,
-      imageUrl:
-          'https://live.staticflickr.com/4043/4438260868_cc79b3369d_z.jpg',
-    ),
+        id: 'p6',
+        title: 'Chicken Breast',
+        description:
+            'chicken breast is a lean cut of meat taken from the pectoral muscle on the underside of the chicken. ',
+        price: 19.99,
+        imageUrl:
+            'https://www.licious.in/blog/wp-content/uploads/2021/01/chicken-breast-price-2.jpg'),
     Product(
-      id: 'p1',
-      title: 'Red Shirt',
-      description: 'A red shirt - it is pretty red!',
+      id: 'p7',
+      title: 'Sausage',
+      description:
+          'A sausage is a type of meat product usually made from ground meat—often pork, beef, or poultry—along with salt, spices and other flavourings.',
       price: 29.99,
       imageUrl:
-          'https://cdn.pixabay.com/photo/2016/10/02/22/17/red-t-shirt-1710578_1280.jpg',
+          'https://media.istockphoto.com/photos/sausages-picture-id1310971056?b=1&k=20&m=1310971056&s=170667a&w=0&h=JzQPBiik4ke02MDkhl94noQafiqwTXlgR_FEkY8hF88=',
     ),
     Product(
-      id: 'p2',
-      title: 'Trousers',
-      description: 'A nice pair of trousers.',
+      id: 'p8',
+      title: 'Salami',
+      description:
+          'Salami is a cured sausage consisting of fermented and air-dried meat, typically pork',
       price: 59.99,
       imageUrl:
-          'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Trousers%2C_dress_%28AM_1960.022-8%29.jpg/512px-Trousers%2C_dress_%28AM_1960.022-8%29.jpg',
+          'https://4.imimg.com/data4/IG/FS/MY-9650223/pork-salami-500x500.jpg',
     ),
     Product(
-      id: 'p3',
-      title: 'Yellow Scarf',
-      description: 'Warm and cozy - exactly what you need for the winter.',
-      price: 19.99,
-      imageUrl:
-          'https://live.staticflickr.com/4043/4438260868_cc79b3369d_z.jpg',
-    ),
+        id: 'p9',
+        title: 'Chicken Breast',
+        description:
+            'chicken breast is a lean cut of meat taken from the pectoral muscle on the underside of the chicken. ',
+        price: 19.99,
+        imageUrl:
+            'https://www.licious.in/blog/wp-content/uploads/2021/01/chicken-breast-price-2.jpg'),
     Product(
-      id: 'p1',
-      title: 'Red Shirt',
-      description: 'A red shirt - it is pretty red!',
+      id: 'p10',
+      title: 'Sausage',
+      description:
+          'A sausage is a type of meat product usually made from ground meat—often pork, beef, or poultry—along with salt, spices and other flavourings.',
       price: 29.99,
       imageUrl:
-          'https://cdn.pixabay.com/photo/2016/10/02/22/17/red-t-shirt-1710578_1280.jpg',
+          'https://media.istockphoto.com/photos/sausages-picture-id1310971056?b=1&k=20&m=1310971056&s=170667a&w=0&h=JzQPBiik4ke02MDkhl94noQafiqwTXlgR_FEkY8hF88=',
     ),
     Product(
-      id: 'p2',
-      title: 'Trousers',
-      description: 'A nice pair of trousers.',
+      id: 'p11',
+      title: 'Salami',
+      description:
+          'Salami is a cured sausage consisting of fermented and air-dried meat, typically pork',
       price: 59.99,
       imageUrl:
-          'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Trousers%2C_dress_%28AM_1960.022-8%29.jpg/512px-Trousers%2C_dress_%28AM_1960.022-8%29.jpg',
+          'https://4.imimg.com/data4/IG/FS/MY-9650223/pork-salami-500x500.jpg',
     ),
     Product(
-      id: 'p3',
-      title: 'Yellow Scarf',
-      description: 'Warm and cozy - exactly what you need for the winter.',
-      price: 19.99,
-      imageUrl:
-          'https://live.staticflickr.com/4043/4438260868_cc79b3369d_z.jpg',
-    ),
-    Product(
-      id: 'p1',
-      title: 'Red Shirt',
-      description: 'A red shirt - it is pretty red!',
-      price: 29.99,
-      imageUrl:
-          'https://cdn.pixabay.com/photo/2016/10/02/22/17/red-t-shirt-1710578_1280.jpg',
-    ),
-    Product(
-      id: 'p2',
-      title: 'Trousers',
-      description: 'A nice pair of trousers.',
-      price: 59.99,
-      imageUrl:
-          'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Trousers%2C_dress_%28AM_1960.022-8%29.jpg/512px-Trousers%2C_dress_%28AM_1960.022-8%29.jpg',
-    ),
-    Product(
-      id: 'p3',
-      title: 'Yellow Scarf',
-      description: 'Warm and cozy - exactly what you need for the winter.',
-      price: 19.99,
-      imageUrl:
-          'https://live.staticflickr.com/4043/4438260868_cc79b3369d_z.jpg',
-    ),
-    Product(
-      id: 'p1',
-      title: 'Red Shirt',
-      description: 'A red shirt - it is pretty red!',
-      price: 29.99,
-      imageUrl:
-          'https://cdn.pixabay.com/photo/2016/10/02/22/17/red-t-shirt-1710578_1280.jpg',
-    ),
-    Product(
-      id: 'p2',
-      title: 'Trousers',
-      description: 'A nice pair of trousers.',
-      price: 59.99,
-      imageUrl:
-          'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Trousers%2C_dress_%28AM_1960.022-8%29.jpg/512px-Trousers%2C_dress_%28AM_1960.022-8%29.jpg',
-    ),
-    Product(
-      id: 'p3',
-      title: 'Yellow Scarf',
-      description: 'Warm and cozy - exactly what you need for the winter.',
-      price: 19.99,
-      imageUrl:
-          'https://live.staticflickr.com/4043/4438260868_cc79b3369d_z.jpg',
-    ),
+        id: 'p12',
+        title: 'Chicken Breast',
+        description:
+            'chicken breast is a lean cut of meat taken from the pectoral muscle on the underside of the chicken. ',
+        price: 19.99,
+        imageUrl:
+            'https://www.licious.in/blog/wp-content/uploads/2021/01/chicken-breast-price-2.jpg'),
   ];
+
+  // var _showFavoritesOnly = false;
+
   List<Product> get items {
+    // if (_showFavoritesOnly) {
+    //   return _items.where((prodItem) => prodItem.isFavorite).toList();
+    // } else {
     return [..._items];
+    // }
   }
+
+  List<Product> get favoriteItems {
+    return _items.where((prodItem) => prodItem.isFavorite).toList();
+  }
+
+  // void showFavoritesOnly() {
+  //   _showFavoritesOnly = true;
+  //   notifyListeners();
+  // }
+
+  // void showAll() {
+  //   _showFavoritesOnly = false;
+  //   notifyListeners();
+  // }
 
   void addProduct() {
     // _items.add(value);
     notifyListeners();
+  }
+
+  Product findById(String id) {
+    return _items.firstWhere((prod) => prod.id == id);
   }
 }
